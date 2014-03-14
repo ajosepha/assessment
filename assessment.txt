@@ -1,0 +1,44 @@
+How does rails communicate with the database?  Please be thorough in discussing all the config files and pieces of rails necessary to communicate with the database.
+
+Rails communicates with the database through the model. The model tells the database what to save. This tells the relationship between parameters in the database.  You can generate a migration in the command line, and then run it using rake db:migarate.  This creats a migration with a columns that will be persisted into the database. This is how you create the database, which is then what the models are saved into. 
+What is a resource?
+A resource tells you what CRUD paths you are using and what paths will be available then in the controller
+
+What are the standard RESTful routes for a resource?
+-index
+-new
+-create
+-show
+-update
+-edit
+-destroy
+
+
+What is CRUD?
+-create
+-read 
+-update
+-destroy
+
+What is REST?
+-restful routes are routes are an architecture 
+
+What is the difference between CRUD and REST?
+-crud is an acronym and rest is a web standard.
+
+Describe the flow of a request from a users browser through the rails stack and back.
+-user logs in
+-login goes to the database, checks (say using DEVISE), user successfully logs in
+-goes to routes
+-goes to controller
+-contoller talks to the model
+-model does things and can talk to the database
+-goes back to controller with variables
+-variables are showed in the view
+-view goes to a string, which is manipulated and shown in the browser
+
+What are HTTP verbs?
+-they are the type of requests
+-GET, PUT, POST, DELETE
+Why do we use migrations.
+-Use migrations to construct a database.
